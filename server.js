@@ -5,6 +5,7 @@ const http = require("http");
 
 app.use(express.static("public"));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // 2: Session
 
@@ -14,12 +15,13 @@ app.set("view engine", "ejs");
 // BSSR -Backend server side rendering
 
 // 4: Routes
-app.get("/hello", function (req, res) {
-  res.end("<h1> Hello world!</h1>");
+
+app.post("/create-item", function (req, res) {
+  //  TODO:
 });
 
-app.get("/gift", function (req, res) {
-  res.end("<h1> Siz sovg'alar bo'limidasiz!</h1>");
+app.get("/", function (req, res) {
+  res.render("harid");
 });
 
 const server = http.createServer(app);
