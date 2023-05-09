@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background: #f0f0f6;
+}
+
 .frame {
   width: 100%;
   height: 100%;
@@ -12,6 +16,7 @@
   flex-direction: row;
   justify-content: center;
   background: #e5e5e5;
+  /* background: #f0f0f6; */
 }
 
 .main_frame {
@@ -22,13 +27,14 @@
   display: flex;
   flex-direction: row;
   margin-top: 2px;
-  background-color: #f7f6b9;
+  /* background-color: #f7f6b9; */
+  background: #f0f0f6;
 }
 
 .main_frame .left_frame {
   position: relative;
   width: 305px;
-  height: 1315px;
+  height: 1400px;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -477,6 +483,92 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
+  text-transform: capitalize;
+  font-feature-settings: "calt" off, "kern" off;
+  color: #767676;
+}
+
+/* ================ BOXES styles ============================== */
+
+.boxes_div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.boxes_div .box_1 {
+  width: 310px;
+  height: 225px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.coding {
+  margin-top: 28px;
+}
+
+.box_1_title {
+  margin-top: 26px;
+  margin-bottom: 15px;
+  font-family: "san-serif";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 123.6%;
+  text-transform: capitalize;
+  color: #2b2b2b;
+}
+
+.box_1_desc {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: capitalize;
+  font-feature-settings: "calt" off, "kern" off;
+  color: #767676;
+}
+
+.order_now {
+  margin-top: 30px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffb400;
+  display: flex;
+  align-items: center;
+}
+
+.box_1_title_last {
+  margin-top: 31px;
+  /* margin-bottom: 15px; */
+  font-family: "san-serif";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 123.6%;
+  text-transform: capitalize;
+  color: #2b2b2b;
+}
+
+.box_1_desc_last {
+  width: 260px;
+  margin-top: 22px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
   text-transform: capitalize;
   font-feature-settings: "calt" off, "kern" off;
   color: #767676;
