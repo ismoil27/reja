@@ -237,7 +237,7 @@ body {
 }
 
 .html_skills {
-  width: 95%;
+  width: 90%;
   height: 100%;
   background-color: #ffb400;
 }
@@ -251,8 +251,26 @@ body {
   margin-bottom: 11px;
 }
 
+.html_skills1 {
+  width: 95%;
+  height: 100%;
+  background-color: #ffb400;
+}
+
 .html_skills2 {
   width: 80%;
+  height: 100%;
+  background-color: #ffb400;
+}
+
+.html_skills3 {
+  width: 80%;
+  height: 100%;
+  background-color: #ffb400;
+}
+
+.html_skills21 {
+  width: 85%;
   height: 100%;
   background-color: #ffb400;
 }
@@ -305,8 +323,8 @@ body {
 
 /* ===============  MIDD_FRAME ========================== */
 
-.midd_frame {
-}
+/* .midd_frame {
+} */
 
 /* ===============  END MIDD_FRAME ========================== */
 
@@ -334,7 +352,7 @@ body {
 .midd_title {
   position: relative;
   width: 499.51px;
-  height: 116.74px;
+  height: 90.74px;
 
   font-family: "Inter";
   font-style: normal;
@@ -546,6 +564,7 @@ body {
   color: #ffb400;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .box_1_title_last {
@@ -581,6 +600,10 @@ body {
   margin-bottom: 174px;
 }
 
+.right_frame_top > img {
+  cursor: pointer;
+}
+
 .right_frame_bottom {
   display: flex;
   flex-direction: column;
@@ -588,4 +611,5 @@ body {
 
 .right_frame_icons {
   margin-bottom: 43px;
+  cursor: pointer;
 }
