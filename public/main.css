@@ -305,8 +305,8 @@ body {
 
 /* ===============  MIDD_FRAME ========================== */
 
-.midd_frame {
-}
+/* .midd_frame {
+} */
 
 /* ===============  END MIDD_FRAME ========================== */
 
@@ -334,7 +334,7 @@ body {
 .midd_title {
   position: relative;
   width: 499.51px;
-  height: 116.74px;
+  height: 90.74px;
 
   font-family: "Inter";
   font-style: normal;

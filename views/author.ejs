@@ -175,15 +175,8 @@
         <div class="midd_frame">
           <div class="midd_top_div">
             <div class="mid_top_left">
-              <h1 class="midd_title">
-                Doctor neurologists <br />
-                in OHSU Hospital
-              </h1>
-              <p class="lorem">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
-                volutpat feugiat placerat lobortis. Natoque rutrum semper sed
-                suspendisse nunc lectus.
-              </p>
+              <h1 class="midd_title"><%= user.work_place %></h1>
+              <p class="lorem"><%= user.about_me %></p>
               <button class="btn">HIRE ME</button>
             </div>
             <div class="mid_top_right">
@@ -199,28 +192,26 @@
           </div>
           <div class="mid_bottom">
             <p class="my_services">My Services</p>
-            <p class="my_services_desc">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit. lorem
-              ipsum
-            </p>
+            <p class="my_services_desc"><%= user.service_desc %></p>
             <div class="boxes_div">
               <div class="box_1">
                 <img class="coding" src="box_images/coding.svg" alt="" />
-                <p class="box_1_title">web development</p>
-                <span class="box_1_desc">blog, e-commerce</span>
+                <p class="box_1_title"><%= user.service_types[0] %></p>
+                <span class="box_1_desc"
+                  ><%= user.service_type_desc[0] %>
+                </span>
               </div>
               <!-- box_2 -->
               <div class="box_1">
                 <img class="coding" src="box_images/illustration.svg" alt="" />
-                <p class="box_1_title">web development</p>
-                <span class="box_1_desc">blog, e-commerce</span>
+                <p class="box_1_title"><%= user.service_types[1] %></p>
+                <span class="box_1_desc"><%= user.service_type_desc[1] %></span>
               </div>
               <!-- box_3 -->
               <div class="box_1">
                 <img class="coding" src="box_images/microphone.svg" alt="" />
-                <p class="box_1_title">web development</p>
-                <span class="box_1_desc">blog, e-commerce</span>
+                <p class="box_1_title"><%= user.service_types[2] %></p>
+                <span class="box_1_desc"><%= user.service_type_desc[2] %></span>
               </div>
               <div class="box_1">
                 <img
@@ -228,17 +219,17 @@
                   src="box_images/game_development.svg"
                   alt=""
                 />
-                <p class="box_1_title">web development</p>
-                <span class="box_1_desc">blog, e-commerce</span>
+                <p class="box_1_title"><%= user.service_types[3] %></p>
+                <span class="box_1_desc"><%= user.service_type_desc[3] %></span>
               </div>
               <div class="box_1">
                 <img class="coding" src="box_images/photographer.svg" alt="" />
-                <p class="box_1_title">web development</p>
-                <span class="box_1_desc">blog, e-commerce</span>
+                <p class="box_1_title"><%= user.service_types[4] %></p>
+                <span class="box_1_desc"><%= user.service_type_desc[4] %></span>
               </div>
               <div class="box_1">
                 <!-- <img class="coding" src="box_images/coding.svg" alt="" /> -->
-                <p class="box_1_title_last">advertising</p>
+                <p class="box_1_title_last"><%= user.service_types[5]%></p>
                 <span class="box_1_desc_last"
                   >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Vitae nulla diam in ac dictum a urna viverra morbi.
