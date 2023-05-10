@@ -9,6 +9,7 @@ const list = [
   "Endi dam oling, foydasi yo'q endi", // 60
 ];
 
+// CALLBACK function
 function maslahatBering(a, callback) {
   if (typeof a !== "number") callback("Iltimos raqam yozing", null);
   else if (a <= 20) callback(null, list[0]);
@@ -34,6 +35,7 @@ maslahatBering(65, (err, data) => {
 
 console.log("Passed here 1");
 
+// ASYNC function
 // async function maslahatBering(a, callback) {
 //   if (typeof a !== "number") throw new Error("Iltimos raqam yozing");
 //   else if (a <= 20) return list[0];
@@ -58,6 +60,7 @@ console.log("Passed here 1");
 //   }
 // }
 
+// CALL via then/catch
 // console.log("Passed here 0");
 
 // maslahatBering("hello")
@@ -70,7 +73,7 @@ console.log("Passed here 1");
 
 // console.log("Passed here 1");
 
-// async/await
+// CALL via async/await
 // async function run() {
 //   let javob = await maslahatBering(65);
 //   console.log(javob);
