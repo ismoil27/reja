@@ -1,5 +1,3 @@
-console.log("Ishladi");
-
 function itemTemplate(item) {
   return ` <li
 class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
@@ -35,5 +33,57 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
     })
     .catch((err) => {
       console.log("Try again");
+    });
+});
+
+document.addEventListener("click", function (e) {
+  // delete operation
+  if (e.target.classList.contains("delete-me")) {
+    if (confirm("Do you wanna delete")) {
+      axios
+        .post("delete-item", { id: e.target.getAttribute("data-id") })
+        .then((res) => {
+          e.target.parentElement.parentElement.remove();
+        })
+        .catch((err) => {
+          console.log("Please try again");
+        });
+    } else {
+      alert("No button clicked");
+    }
+  }
+  // edit operation
+  if (e.target.classList.contains("edit-me")) {
+    let userInput = prompt(
+      "O'zgartirish kiriting",
+      e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
+    );
+    if (userInput) {
+      axios
+        .post("/edit-item", {
+          id: e.target.getAttribute("data-id"),
+          new_input: userInput,
+        })
+        .then((res) => {
+          e.target.parentElement.parentElement.querySelector(
+            ".item-text"
+          ).innerHTML = userInput;
+        })
+        .catch((err) => {
+          console.log("Something went wrong try again");
+        });
+    }
+  }
+});
+
+document.getElementById("clean-all").addEventListener("click", function () {
+  axios
+    .post("/delete-all", { delete_all: true })
+    .then((res) => {
+      // console.log(res);
+      document.location.reload();
+    })
+    .catch((err) => {
+      console.log("Something went wrong");
     });
 });

@@ -15,6 +15,8 @@ fs.readFile("database/user.json", "utf8", (err, data) => {
 // MongoDB call
 const db = require("./server").db();
 
+const mongodb = require("mongodb");
+
 // 1
 app.use(express.static("public"));
 app.use(express.json());
@@ -39,6 +41,38 @@ app.post("/create-item", function (req, res) {
 
     res.json(data.ops[0]);
   });
+});
+
+app.post("/delete-item", function (req, res) {
+  const id = req.body.id;
+
+  db.collection("plans").deleteOne(
+    { _id: new mongodb.ObjectId(id) },
+    function (err, data) {
+      res.json({ state: "succes" });
+    }
+  );
+});
+
+app.post("/edit-item", (req, res) => {
+  const data = req.body;
+  db.collection("plans").findOneAndUpdate(
+    {
+      _id: new mongodb.ObjectID(data.id),
+    },
+    { $set: { reja: data.new_input } },
+    function (err, data) {
+      res.json({ state: "success" });
+    }
+  );
+});
+
+app.post("/delete-all", (req, res) => {
+  if (req.body.delete_all) {
+    db.collection("plans").deleteMany(function () {
+      res.json({ state: "All plans deleted" });
+    });
+  }
 });
 
 app.get("/author", function (req, res) {

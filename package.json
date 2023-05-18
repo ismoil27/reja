@@ -6,8 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "train": "nodemon train.js",
-    "test": "nodemon challenge.js"
+    "train": "nodemon train.js"
   },
   "keywords": [],
   "author": "",
