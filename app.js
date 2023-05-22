@@ -31,6 +31,11 @@ app.set("view engine", "ejs");
 
 // 4: Routes
 
+// CRUD
+// READ
+// CREATE
+// DELETE
+
 app.post("/create-item", function (req, res) {
   console.log("user entered /create-item");
 

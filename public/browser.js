@@ -39,7 +39,7 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
 document.addEventListener("click", function (e) {
   // delete operation
   if (e.target.classList.contains("delete-me")) {
-    if (confirm("Do you wanna delete")) {
+    if (confirm("Do you wanna delete?")) {
       axios
         .post("delete-item", { id: e.target.getAttribute("data-id") })
         .then((res) => {
