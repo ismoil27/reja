@@ -81,6 +81,7 @@ document.getElementById("clean-all").addEventListener("click", function () {
     .post("/delete-all", { delete_all: true })
     .then((res) => {
       // console.log(res);
+      alert(res.data.state);
       document.location.reload();
     })
     .catch((err) => {
